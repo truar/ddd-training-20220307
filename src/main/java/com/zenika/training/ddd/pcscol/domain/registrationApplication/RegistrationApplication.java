@@ -1,15 +1,15 @@
-package com.zenika.training.ddd.pcscol.domain.dossierinscription;
+package com.zenika.training.ddd.pcscol.domain.registrationApplication;
 
-import com.zenika.training.ddd.pcscol.domain.voeu.Choice;
+import com.zenika.training.ddd.pcscol.domain.choice.Choice;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.zenika.training.ddd.pcscol.domain.dossierinscription.AttachmentType.IDENTITY_CARD;
-import static com.zenika.training.ddd.pcscol.domain.dossierinscription.AttachmentType.PHOTO;
-import static com.zenika.training.ddd.pcscol.domain.dossierinscription.RegistrationApplicationStatus.*;
+import static com.zenika.training.ddd.pcscol.domain.registrationApplication.AttachmentType.IDENTITY_CARD;
+import static com.zenika.training.ddd.pcscol.domain.registrationApplication.AttachmentType.PHOTO;
+import static com.zenika.training.ddd.pcscol.domain.registrationApplication.RegistrationApplicationStatus.*;
 import static java.util.stream.Collectors.toList;
 
 public class RegistrationApplication {

@@ -1,12 +1,12 @@
-package com.zenika.training.ddd.pcscol.domain.voeu;
+package com.zenika.training.ddd.pcscol.domain.choice;
 
 import com.zenika.training.ddd.pcscol.domain.DomainEvent;
 
-public class VoeuAjoutee implements DomainEvent {
+public class ChoiceAdded implements DomainEvent {
     private final String id;
     private final String idDossier;
 
-    public VoeuAjoutee(String id, String idDossier) {
+    public ChoiceAdded(String id, String idDossier) {
         this.id = id;
         this.idDossier = idDossier;
     }

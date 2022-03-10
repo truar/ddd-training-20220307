@@ -1,8 +1,8 @@
 package com.zenika.training.ddd.pcscol.application;
 
 import com.zenika.training.ddd.pcscol.domain.IdGenerator;
-import com.zenika.training.ddd.pcscol.domain.dossierinscription.RegistrationApplication;
-import com.zenika.training.ddd.pcscol.domain.dossierinscription.RegistrationApplicationRepository;
+import com.zenika.training.ddd.pcscol.domain.registrationApplication.RegistrationApplication;
+import com.zenika.training.ddd.pcscol.domain.registrationApplication.RegistrationApplicationRepository;
 
 import java.time.LocalDate;
 

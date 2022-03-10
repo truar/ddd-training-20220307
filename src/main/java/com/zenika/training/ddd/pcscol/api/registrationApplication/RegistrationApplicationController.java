@@ -1,14 +1,14 @@
-package com.zenika.training.ddd.pcscol.api.dossierinscription;
+package com.zenika.training.ddd.pcscol.api.registrationApplication;
 
 import com.zenika.training.ddd.pcscol.application.RegistrationApplicationService;
-import com.zenika.training.ddd.pcscol.domain.dossierinscription.RegistrationApplication;
-import com.zenika.training.ddd.pcscol.domain.dossierinscription.Attachment;
+import com.zenika.training.ddd.pcscol.domain.registrationApplication.RegistrationApplication;
+import com.zenika.training.ddd.pcscol.domain.registrationApplication.Attachment;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static com.zenika.training.ddd.pcscol.api.dossierinscription.RegistrationApplicationResponse.AttachmentResponse;
+import static com.zenika.training.ddd.pcscol.api.registrationApplication.RegistrationApplicationResponse.AttachmentResponse;
 import static java.util.stream.Collectors.toList;
 
 @RestController

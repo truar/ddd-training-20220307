@@ -1,4 +1,4 @@
-package com.zenika.training.ddd.pcscol.domain.voeu;
+package com.zenika.training.ddd.pcscol.domain.choice;
 
 public class Choice {
     private final String id;

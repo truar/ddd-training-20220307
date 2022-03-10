@@ -1,13 +1,13 @@
-package com.zenika.training.ddd.pcscol.infrastructure.persistence.dossierinscription.jpa;
+package com.zenika.training.ddd.pcscol.infrastructure.persistence.registrationApplication.jpa;
 
-import com.zenika.training.ddd.pcscol.domain.dossierinscription.RegistrationApplication;
-import com.zenika.training.ddd.pcscol.domain.dossierinscription.RegistrationApplicationRepository;
+import com.zenika.training.ddd.pcscol.domain.registrationApplication.RegistrationApplication;
+import com.zenika.training.ddd.pcscol.domain.registrationApplication.RegistrationApplicationRepository;
 
 import java.util.Optional;
 
 public class JpaRegistrationApplicationRepository implements RegistrationApplicationRepository {
 
-    private JpaDossierInscriptionDao dao;
+    private JpaRegistrationApplicationDao dao;
 
     @Override
     public void save(RegistrationApplication registrationApplication) {

@@ -1,4 +1,4 @@
-package com.zenika.training.ddd.pcscol.domain.dossierinscription;
+package com.zenika.training.ddd.pcscol.domain.registrationApplication;
 
 public class Attachment {
     private final String url;

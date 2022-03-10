@@ -1,13 +1,13 @@
-package com.zenika.training.ddd.pcscol.domain.dossierinscription;
+package com.zenika.training.ddd.pcscol.domain.registrationApplication;
 
-import com.zenika.training.ddd.pcscol.domain.voeu.Choice;
+import com.zenika.training.ddd.pcscol.domain.choice.Choice;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static com.zenika.training.ddd.pcscol.domain.dossierinscription.RegistrationApplicationStatus.*;
+import static com.zenika.training.ddd.pcscol.domain.registrationApplication.RegistrationApplicationStatus.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class RegistrationApplicationTest {
@@ -63,7 +63,7 @@ class RegistrationApplicationTest {
     }
 
     @Test
-    void application_is_not_ATTACHMENT_PENDING_VALIDATION_if_there_is_no_PHOTO_attached() {
+    void application_is_not_ATTACHMENT_PENDING_VALIDATION_if_there_are_no_PHOTO_attached() {
         RegistrationApplication application = aScholarshipApplication();
 
         Attachment identityCard = new Attachment("http://bucket/lastName-firstName/identityCard", AttachmentType.IDENTITY_CARD);
@@ -75,7 +75,7 @@ class RegistrationApplicationTest {
     }
 
     @Test
-    void application_is_not_ATTACHMENT_PENDING_VALIDATION_if_there_is_no_IDENTITY_CARD_attached() {
+    void application_is_not_ATTACHMENT_PENDING_VALIDATION_if_there_are_no_IDENTITY_CARD_attached() {
         RegistrationApplication application = aScholarshipApplication();
 
         Attachment photo = new Attachment("http://bucket/lastName-firstName/photo", AttachmentType.PHOTO);

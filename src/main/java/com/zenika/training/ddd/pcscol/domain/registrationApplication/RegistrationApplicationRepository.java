@@ -1,4 +1,4 @@
-package com.zenika.training.ddd.pcscol.domain.dossierinscription;
+package com.zenika.training.ddd.pcscol.domain.registrationApplication;
 
 import java.util.Optional;
 

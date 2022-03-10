@@ -1,4 +1,4 @@
-package com.zenika.training.ddd.pcscol.api.dossierinscription;
+package com.zenika.training.ddd.pcscol.api.registrationApplication;
 
 import java.time.LocalDate;
 
