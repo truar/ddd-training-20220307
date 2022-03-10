@@ -1,15 +1,15 @@
 package com.zenika.training.ddd.pcscol.domain.dossierinscription;
 
-public class PieceJointe {
+public class Attachment {
     private final String url;
-    private final PieceJointeType type;
+    private final AttachmentType type;
 
-    public PieceJointe(String url, PieceJointeType type) {
+    public Attachment(String url, AttachmentType type) {
         this.url = url;
         this.type = type;
     }
 
-    public PieceJointeType getType() {
+    public AttachmentType getType() {
         return type;
     }
 

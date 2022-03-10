@@ -2,34 +2,31 @@ package com.zenika.training.ddd.pcscol.application;
 
 import com.zenika.training.ddd.pcscol.domain.EventPublisher;
 import com.zenika.training.ddd.pcscol.domain.IdGenerator;
-import com.zenika.training.ddd.pcscol.domain.dossierinscription.DossierInscription;
-import com.zenika.training.ddd.pcscol.domain.dossierinscription.DossierInscriptionRepository;
-import com.zenika.training.ddd.pcscol.domain.voeu.Voeu;
+import com.zenika.training.ddd.pcscol.domain.dossierinscription.RegistrationApplication;
+import com.zenika.training.ddd.pcscol.domain.dossierinscription.RegistrationApplicationRepository;
+import com.zenika.training.ddd.pcscol.domain.voeu.Choice;
 import com.zenika.training.ddd.pcscol.domain.voeu.VoeuAjoutee;
-import com.zenika.training.ddd.pcscol.domain.voeu.VoeuRepository;
 import org.springframework.stereotype.Service;
-
-import java.beans.Transient;
 
 @Service
 public class VoeuApplicationService {
     private IdGenerator idGenerator;
-    private DossierInscriptionRepository dossierInscriptionRepository;
+    private RegistrationApplicationRepository registrationApplicationRepository;
 //    private VoeuRepository voeuRepository;
     private EventPublisher eventPublisher;
 
-    public VoeuApplicationService(IdGenerator idGenerator, DossierInscriptionRepository dossierInscriptionRepository, EventPublisher eventPublisher) {
+    public VoeuApplicationService(IdGenerator idGenerator, RegistrationApplicationRepository registrationApplicationRepository, EventPublisher eventPublisher) {
         this.idGenerator = idGenerator;
-        this.dossierInscriptionRepository = dossierInscriptionRepository;
+        this.registrationApplicationRepository = registrationApplicationRepository;
         this.eventPublisher = eventPublisher;
     }
 
     public void ajouterVoeu(String idDossier, String codeFormation) {
-        DossierInscription dossierInscription = dossierInscriptionRepository.findById(idDossier).orElseThrow();
+        RegistrationApplication registrationApplication = registrationApplicationRepository.findById(idDossier).orElseThrow();
         String id = idGenerator.generateId();
-        Voeu voeu = dossierInscription.ajouteUnVoeu(id, codeFormation, null);
+        Choice choice = registrationApplication.addChoice(id, codeFormation, null);
 //        voeuRepository.save(voeu);
-        VoeuAjoutee voeuAjoutee = new VoeuAjoutee(voeu.getId(), voeu.getIdDossier() /*...*/);
+        VoeuAjoutee voeuAjoutee = new VoeuAjoutee(choice.getId(), choice.getIdDossier() /*...*/);
         eventPublisher.publish(voeuAjoutee);
     }
 
