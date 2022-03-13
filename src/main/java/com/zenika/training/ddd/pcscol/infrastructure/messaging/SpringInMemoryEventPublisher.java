@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SpringEventPublisher implements EventPublisher {
+public class SpringInMemoryEventPublisher implements EventPublisher {
 
     @Autowired
     private ApplicationEventPublisher publisher;

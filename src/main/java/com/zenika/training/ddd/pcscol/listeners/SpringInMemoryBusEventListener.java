@@ -6,12 +6,13 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 @Component
-public class SpringListener {
+public class SpringInMemoryBusEventListener {
 
-    private RegistrationApplicationService service;
+    private RegistrationApplicationService applicationService;
 
     @EventListener
     public void handle(ChoiceAdded choiceAdded) {
         System.out.println(choiceAdded);
+//        service.addChoice(choiceAdded.getId(), choiceAdded.getIdDossier());
     }
 }

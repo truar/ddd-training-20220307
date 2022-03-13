@@ -28,6 +28,12 @@ public class RegistrationApplicationController {
                 request.lastName, request.firstName, request.birthDate);
     }
 
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void completeAdministrativeInformation(@RequestBody CompleteAdministrativeInformationRequest request) {
+        applicationService.completeAdministrativeInformation(request.idApplication, request.scholarship, request.address);
+    }
+
     @GetMapping("/{id}")
     public RegistrationApplicationResponse fetchRegistrationApplication(@PathVariable String id) {
         return toResponse(applicationService.getRegistrationApplication(id));

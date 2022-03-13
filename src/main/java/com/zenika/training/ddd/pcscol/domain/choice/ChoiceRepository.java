@@ -1,6 +1,6 @@
 package com.zenika.training.ddd.pcscol.domain.choice;
 
-public interface VoeuRepository {
+public interface ChoiceRepository {
 
     void save(Choice choice);
 
